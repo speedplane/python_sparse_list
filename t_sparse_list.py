@@ -2,7 +2,10 @@
 
 import unittest
 import sparse_list
-from future.builtins import range
+try:
+    from future.builtins import range
+except ImportError:
+    range = xrange
 
 
 class TestSparseList(unittest.TestCase):
